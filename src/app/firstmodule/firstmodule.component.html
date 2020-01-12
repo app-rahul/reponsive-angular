@@ -1,0 +1,51 @@
+<div class="container-fluid module_container">
+    <ng-container *ngIf="IsSelectedMenu('Home')">
+        <h3>Welcome to angular 8 project</h3>
+        <div class="card-deck">
+            <div class="card">
+                
+                <div class="card-body">
+                    <h4 class="card-title text-success">Menu1</h4>
+                    <p class="card-text">our latest menu!</p>
+                </div>
+                <img class="card-img-bottom" src="assets/img/compass.png" alt="">
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title  text-warning">Menu2</h4>
+                    <p class="card-text">will be available soon</p>
+                    <img class="card-img-bottom" src="assets/img/bear.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="IsSelectedMenu('Menu1')">
+        <div>Menu1 is working</div>
+        <div id="container"></div>
+        <button type="button" (click)="plotgraph()" class="btn btn-primary btn-lg">plot graph!!</button>
+        
+    </ng-container>
+    <ng-container *ngIf="IsSelectedMenu('Menu2')">
+        <button type="button" (click)="customAlert('hello')" class="btn btn-primary btn-lg">click me!!</button>
+        Select age<br/>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active"> 
+                <input type="radio" name="metoo" id="less20" autocomplete="off" checked>Less than 20
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="metoo" id="less40" autocomplete="off">20 to 40  
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="metoo" id="less50" autocomplete="off ">more than 40
+            </label>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="IsSelectedMenu('About')">
+        angular trail application<br/>
+        Contact us
+    <ul class="list">
+        <li class="list">Rahul kumar</li>
+        <li class="list"> rahul4michan@gmail.com</li>
+    </ul>
+    </ng-container>
+</div>

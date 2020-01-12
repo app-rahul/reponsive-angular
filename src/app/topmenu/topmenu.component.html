@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img height="50px" width="50px" src="assets/img/Logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <ng-container *ngFor = "let item of menu">
+                <li class="nav-item" [class.active] = "item.IsActive" (click)="openMenu(item)">
+                    <a class="nav-link" [style.cursor]="'pointer'">{{item.Name}}</a>
+                </li>
+            </ng-container>
+            
+        </ul>
+    </div>
+    </div>
+</nav>

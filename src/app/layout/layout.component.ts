@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  public customAlert = (message:string) :void =>{
+    alert(message);
+  }
+  
   constructor() { }
 
   ngOnInit() {

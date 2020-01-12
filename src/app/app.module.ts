@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
+import { TopmenuComponent } from './topmenu/topmenu.component';
+import { FirstmoduleComponent } from './firstmodule/firstmodule.component';
+import { MenuService } from './menu.service';
+import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    TopmenuComponent,
+    FirstmoduleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ChartModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
